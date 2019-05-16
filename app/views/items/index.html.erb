@@ -1,7 +1,6 @@
 <h1>
-Click for more Info
+<%=@dep.name%>
 </h1>
-<%=link_to 'Add to inventory', new_department_item_path(@dep)%>
 
 <ul>
 <%@items.each do |item|%>
@@ -10,3 +9,6 @@ Click for more Info
 </li>
 <%end%>
 </ul>
+<br/>
+<%=link_to 'Add to inventory', new_department_item_path(@dep)%>
+<%= link_to 'Other Department', root_path%>

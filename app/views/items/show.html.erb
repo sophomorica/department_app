@@ -1,2 +1,10 @@
-<h1>Items#show</h1>
-<p>Find me in app/views/items/show.html.erb</p>
+<h1>Patty's
+<%=@dep.name%> 
+</h1>
+<h2 style= "text-align: center; color: black;"><%= @item.name%></h2>
+
+<p>$<%= @item.price%></p>
+<p><%=@item.instock_alert%><br />
+<%=link_to "Edit #{@item.name}", edit_department_item_path([@dep, @topic])%>
+<%= link_to "Delete", [@dep, @topic], method: :delete%>
+<%= link_to "Back to #{@dep.name}", department_items_path(@dep)%>
