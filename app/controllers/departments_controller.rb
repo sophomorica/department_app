@@ -34,11 +34,8 @@ class DepartmentsController < ApplicationController
   end
 
   def destroy
-    if @dep.update(dep_params)
-      redirect_to @dep
-    else
-      render partial: "form"
-    end
+    @dep.destroy
+    redirect_to departments_path
   end
 
 

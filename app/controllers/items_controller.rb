@@ -42,8 +42,9 @@ class ItemsController < ApplicationController
   private
 
   def set_dep
-    @dep = Department.find(params[:id])
+    @dep = Department.find(params[:department_id])
   end
+
   def set_item
     @item = Item.find(params[:id])
   end

@@ -7,6 +7,9 @@ Patty's Place
 <%=@dep.name%> inventory
 </h2>
 <p>
-<%=link_to "View #{@dep.name}", department_items_path(@dep)%>
+<%=link_to "View #{@dep.name}", department_items_path(@dep.id)%>
 </p>
 <br />
+<%=link_to 'Edit Department', edit_department_path(@dep.id)%>
+<br />
+<%=link_to 'Delete Department', @dep, method: :delete%>
