@@ -3,13 +3,12 @@ Patty's Place
 </h1>
 <hr />
 
-<h2 style = "text-align: center;">
-<%=@dep.name%> inventory
+<h2 style = "text-align: center; text-decoration: none;">
+<%=link_to "#{@dep.name} Inventory", department_items_path(@dep)%>
 </h2>
-<p>
-<%=link_to "View #{@dep.name}", department_items_path(@dep.id)%>
-</p>
+
 <br />
-<%=link_to 'Edit Department', edit_department_path(@dep.id)%>
-<br />
-<%=link_to 'Delete Department', @dep, method: :delete%>
+<%=link_to 'Edit Department', edit_department_path(@dep)%>
+<%=link_to 'Delete Department', @dep%>
+
+<a href="about.html">About</a>
