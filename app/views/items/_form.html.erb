@@ -1,0 +1,16 @@
+<h1> <%=@item.id ? 'Edit Item' : 'Create Item'%> </h1>
+<hr />
+<h1>
+you made it here!!!
+</h1>
+<%=form_for [@dep, @item] do |f|%>
+
+<%=f.label :name%>
+<%=f.text_field :name, required: true, autofocus: true%>
+<%=f.label :price%>
+<%=f.text_field :price, required: true, autofocus: true%>
+<%=f.label :instock%>
+<%=f.check_box :instock, autofocus: true%>
+<%=f.submit%>
+<%end%>
+

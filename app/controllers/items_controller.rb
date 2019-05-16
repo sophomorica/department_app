@@ -16,6 +16,7 @@ class ItemsController < ApplicationController
   def edit
     render partial: "form"
   end
+
   def create
     @item = @dep.items.new(item_params)
     if @item.save
