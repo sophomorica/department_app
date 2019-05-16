@@ -24,6 +24,14 @@ class DepartmentsController < ApplicationController
       render partial: "form"
     end
   end
+  def create
+    @dep = Department.new(dep_params)
+    if @dep.save
+      redirect_to departments_path
+    else 
+      render partial: "form"
+    end
+  end
 
   def destroy
     if @dep.update(dep_params)
